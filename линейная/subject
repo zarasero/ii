@@ -1,0 +1,71 @@
+ft_linear_regression
+An introduction to machine learning
+Chapter IV
+Objective
+The aim of this project is to introduce you to the basic concepts behind machine learning.
+For this project, you will have to create a program that predicts the price of a car by
+using a linear function trained with a gradient descent algorithm.
+We will work on a precise example for the project, but once you’re done you will be
+able to use the algorithm with any other dataset.
+6
+Chapter V
+General instructions
+In this project, you are free to use whatever language you want.
+You are also free to use any libraries you want as long as they do not do all the work
+for you. For example, the use of Python’s numpy.polyfit is considered cheating.
+You should use a language that allows you to easily visualize your
+data : it will be very helpful for debugging.
+7
+Chapter VI
+Mandatory part
+You will implement a simple linear regression with a single feature - in this case, the
+mileage of the car.
+To do so, you need to create two programs:
+• The first program will be used to predict the price of a car for a given mileage.
+When you launch the program, it should prompt you for a mileage, and then give
+you back the estimated price for that mileage. The program will use the following
+hypothesis to predict the price :
+estimateP rice(mileage) = θ0 + (θ1 ∗ mileage)
+Before running the training program, theta0 and theta1 will be set to 0.
+• The second program will be used to train your model. It will read your dataset file
+and perform a linear regression on the data.
+Once the linear regression has completed, you will save the variables theta0 and
+theta1 for use in the first program.
+You will be using the following formulas :
+tmpθ0 = learningRate ∗
+1
+m
+mX−1
+i=0
+(estimateP rice(mileage[i]) − price[i])
+tmpθ1 = learningRate ∗
+1
+m
+mX−1
+i=0
+(estimateP rice(mileage[i]) − price[i]) ∗ mileage[i]
+I let you guess what m is :)
+Note that the estimatePrice is the same as in our first program, but here it uses
+your temporary, most recently computed theta0 and theta1.
+Also, don’t forget to simultaneously update theta0 and theta1.
+8
+Chapter VII
+Bonus part
+Here are some bonuses that could be very useful:
+• Plotting the data into a graph to see their distribution.
+• Plotting the line resulting from your linear regression into the same graph, to see
+the result of your hard work!
+• A program that calculates the precision of your algorithm.
+The bonus part will only be assessed if the mandatory part is
+PERFECT. Perfect means the mandatory part has been integrally done
+and works without malfunctioning. If you have not passed ALL the
+mandatory requirements, your bonus part will not be evaluated at all.
+9
+Chapter VIII
+Submission and peer-evaluation
+Turn in your assignment in your Git repository as usual. Only the work inside your repository will be evaluated during the defense. Don’t hesitate to double-check the names of
+your folders and files to ensure they are correct.
+Here are the points that your peer reviewer will have to check :
+• The absence of libraries that do the work for you
+• The use of the specified hypothesis
+• The use of the specified training function

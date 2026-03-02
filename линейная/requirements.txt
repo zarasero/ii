@@ -1,0 +1,4 @@
+# Standard library only for mandatory part (train, predict).
+# matplotlib — for bonus: plotting data and regression line.
+matplotlib>=3.5.0
+
